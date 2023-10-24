@@ -20,14 +20,14 @@ describe('node-resemble.js', function() {
   describe('largeImageThreshold', function() {
     describe('when unset', function() {
       describe('when ignoreAntialiasing is enabled', function() {
-        it('skips pixels when a dimension is larger than the default threshold (1200)', function(done) {
+        test('skips pixels when a dimension is larger than the default threshold (1200)', function(done) {
           getLargeImageComparison().ignoreAntialiasing().onComplete(function(data) {
             expectPixelsToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
             done();
           });
         });
 
-        it('does not skip pixels when both dimensions are smaller than the default threshold (1200)', function(done) {
+        test('does not skip pixels when both dimensions are smaller than the default threshold (1200)', function(done) {
           getSmallImageComparison().ignoreAntialiasing().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
             done();
@@ -36,14 +36,14 @@ describe('node-resemble.js', function() {
       });
 
       describe('when ignoreAntialiasing is disabled', function() {
-        it('does not skip pixels when a dimension is larger than the default threshold (1200)', function(done) {
+        test('does not skip pixels when a dimension is larger than the default threshold (1200)', function(done) {
           getLargeImageComparison().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
             done();
           });
         });
 
-        it('does not skip pixels when both dimensions are smaller than the default threshold (1200)', function(done) {
+        test('does not skip pixels when both dimensions are smaller than the default threshold (1200)', function(done) {
           getSmallImageComparison().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
             done();
@@ -58,7 +58,7 @@ describe('node-resemble.js', function() {
       });
 
       describe('when ignoreAntialiasing is enabled', function() {
-        it('skips pixels on images with a dimension larger than the given threshold', function(done) {
+        test('skips pixels on images with a dimension larger than the given threshold', function(done) {
           resemble.outputSettings({largeImageThreshold: 999});
           getSmallImageComparison().ignoreAntialiasing().onComplete(function(data) {
             expectPixelsToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
@@ -66,7 +66,7 @@ describe('node-resemble.js', function() {
           });
         });
 
-        it('does not skip pixels on images with a dimension equal to the given threshold', function(done) {
+        test('does not skip pixels on images with a dimension equal to the given threshold', function(done) {
           resemble.outputSettings({largeImageThreshold: 1000});
           getSmallImageComparison().ignoreAntialiasing().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
@@ -74,7 +74,7 @@ describe('node-resemble.js', function() {
           });
         });
 
-        it('does not skip pixels on images with both dimensions smaller than the given threshold', function(done) {
+        test('does not skip pixels on images with both dimensions smaller than the given threshold', function(done) {
           resemble.outputSettings({largeImageThreshold: 1001});
           getSmallImageComparison().ignoreAntialiasing().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
@@ -84,7 +84,7 @@ describe('node-resemble.js', function() {
       });
 
       describe('when ignoreAntialiasing is disabled', function() {
-        it('does not skip pixels on images with a dimension larger than the given threshold', function(done) {
+        test('does not skip pixels on images with a dimension larger than the given threshold', function(done) {
           resemble.outputSettings({largeImageThreshold: 999});
           getSmallImageComparison().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
@@ -92,7 +92,7 @@ describe('node-resemble.js', function() {
           });
         });
 
-        it('does not skip pixels on images with a dimension equal to the given threshold', function(done) {
+        test('does not skip pixels on images with a dimension equal to the given threshold', function(done) {
           resemble.outputSettings({largeImageThreshold: 1000});
           getSmallImageComparison().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
@@ -100,7 +100,7 @@ describe('node-resemble.js', function() {
           });
         });
 
-        it('does not skip pixels on images with both dimensions smaller than the given threshold', function(done) {
+        test('does not skip pixels on images with both dimensions smaller than the given threshold', function(done) {
           resemble.outputSettings({largeImageThreshold: 1001});
           getSmallImageComparison().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
@@ -120,14 +120,14 @@ describe('node-resemble.js', function() {
       });
 
       describe('when ignoreAntialiasing is enabled', function() {
-        it('does not skip pixels on images with a dimension larger than the default threshold (1200)', function(done) {
+        test('does not skip pixels on images with a dimension larger than the default threshold (1200)', function(done) {
           getLargeImageComparison().ignoreAntialiasing().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
             done();
           });
         });
 
-        it('does not skip pixels on images with a dimension smaller than the default threshold (1200)', function(done) {
+        test('does not skip pixels on images with a dimension smaller than the default threshold (1200)', function(done) {
           getSmallImageComparison().ignoreAntialiasing().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
             done();
@@ -136,14 +136,14 @@ describe('node-resemble.js', function() {
       });
 
       describe('when ignoreAntialiasing is disabled', function() {
-        it('does not skip pixels on images with a dimension larger than the default threshold (1200)', function(done) {
+        test('does not skip pixels on images with a dimension larger than the default threshold (1200)', function(done) {
           getLargeImageComparison().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
             done();
           });
         });
 
-        it('does not skip pixels on images with a dimension smaller than the default threshold (1200)', function(done) {
+        test('does not skip pixels on images with a dimension smaller than the default threshold (1200)', function(done) {
           getSmallImageComparison().onComplete(function(data) {
             expectPixelsNotToBeSkipped(data.getDiffImage(), OPTIMISATION_SKIP_STEP);
             done();
@@ -171,7 +171,7 @@ describe('node-resemble.js', function() {
     }
   });
 
-  it('rawMisMatchPercentage contains raw result', function(done) {
+  test('rawMisMatchPercentage contains raw result', function(done) {
 	  resemble(
 	  	EXAMPLE_PEOPLE_IMAGES[0]
 	  ).compareTo(
@@ -183,7 +183,7 @@ describe('node-resemble.js', function() {
   });
 
   describe('Minor color diff tolerance', function () {
-    it('is applied by default', function (done) {
+    test('is applied by default', function (done) {
       resemble(EXAMPLE_TOLERANCE_IMAGES[0])
         .compareTo(EXAMPLE_TOLERANCE_IMAGES[1])
         .onComplete(function (data) {
@@ -192,7 +192,7 @@ describe('node-resemble.js', function() {
         });
     });
 
-    it('is not applied when ignoreNothing is used', function (done) {
+    test('is not applied when ignoreNothing is used', function (done) {
       resemble(EXAMPLE_TOLERANCE_IMAGES[0])
         .compareTo(EXAMPLE_TOLERANCE_IMAGES[1])
         .ignoreNothing()

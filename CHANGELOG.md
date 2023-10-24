@@ -9,6 +9,7 @@
 * changed author to include myself
 * fixed and udated `REDME.md`
 * updated `jpeg-js` to `"^0.4.4"`
+* changed from gulp to jest
 
 ## 1.2.0
 
