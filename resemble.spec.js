@@ -7,6 +7,11 @@ describe('node-resemble.js', function() {
 	  'example/People.png',
 	  'example/People2.png'
   ];
+  var EXAMPLE_TOLERANCE_IMAGES = [
+    'example/100x100_rgb_220.png',
+    'example/100x100_rgb_220_with_change.png',
+  ];
+
   var OPTIMISATION_SKIP_STEP = 6;
   var DEFAULT_LARGE_IMAGE_THRESHOLD = 1200;
 
@@ -175,6 +180,27 @@ describe('node-resemble.js', function() {
 		  expect(data.rawMisMatchPercentage).toBe(8.6612);
 		  done();
 	  });
+  });
+
+  describe('Minor color diff tolerance', function () {
+    it('is applied by default', function (done) {
+      resemble(EXAMPLE_TOLERANCE_IMAGES[0])
+        .compareTo(EXAMPLE_TOLERANCE_IMAGES[1])
+        .onComplete(function (data) {
+          expect(data.misMatchPercentage).toBe('0.00');
+          done();
+        });
+    });
+
+    it('is not applied when ignoreNothing is used', function (done) {
+      resemble(EXAMPLE_TOLERANCE_IMAGES[0])
+        .compareTo(EXAMPLE_TOLERANCE_IMAGES[1])
+        .ignoreNothing()
+        .onComplete(function (data) {
+          expect(data.misMatchPercentage).toBe('83.71');
+          done();
+        });
+    });
   });
 
   function getLargeImageComparison() {
