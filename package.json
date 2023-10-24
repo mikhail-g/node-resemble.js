@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/lksv/node-resemble.js.git"
+    "url": "https://github.com/mikhail-g/node-resemblejs.git"
   },
   "keywords": [
     "comparison",
@@ -22,9 +22,9 @@
   "author": "Lukas Svoboda <lukas.svoboda@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lksv/node-resemble.js/issues"
+    "url": "https://github.com/mikhail-g/node-resemblejs.git/issues"
   },
-  "homepage": "https://github.com/lksv/node-resemble.js",
+  "homepage": "https://github.com/mikhail-g/node-resemblejs.git",
   "dependencies": {
     "jpeg-js": "^0.4.2",
     "pngjs": "^6.0.0"
