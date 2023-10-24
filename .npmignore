@@ -3,3 +3,5 @@ libs
 index.html
 bower.json
 README.md
+example
+resemble.spec.js
