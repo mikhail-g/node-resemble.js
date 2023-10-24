@@ -6,3 +6,6 @@
 
 # jest test coverage
 coverage
+
+# OS files
+.DS_Store
