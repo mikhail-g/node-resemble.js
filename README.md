@@ -1,18 +1,18 @@
-# node-resemblejs
+# @mikhail-g/node-resemble-js
 
 Analyse and compare images with Javascript. This project does not need canvas or any other binary dependencies.
 It is a modification of [Resemble.js](https://github.com/Huddle/Resemble.js)
 
 ## Installation
 
-`npm install node-resemblejs`
+`npm install @mikhail-g/node-resemble-js`
 
 ## Example
 
 ### Retrieve basic analysis on image
 
 ```javascript
-const resemble = require('node-resemblejs');
+const resemble = require('@mikhail-g/node-resemble-js');
 
 resemble(fileData)
   .onComplete(function(data){

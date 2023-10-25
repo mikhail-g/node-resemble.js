@@ -3,11 +3,11 @@
 ## 1.3.0
 
 * fixed `ingnoreNothing()` function to have 0 tolerance
-* rename package name to `node-resemblejs`
+* rename package name to `node-resemble-js`
 * ignored `resemble.spec.js` and `example` images folder for npm release
 * added licence notice for the forked repo
 * changed author to include myself
-* fixed and udated `REDME.md`
+* fixed and updated `README.md`
 * updated `jpeg-js` to `"^0.4.4"`
 * changed from gulp to jest
 

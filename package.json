@@ -1,5 +1,5 @@
 {
-  "name": "node-resemblejs",
+  "name": "@mikhail-g/node-resemble-js",
   "version": "1.3.0",
   "description": "Image analysis and comparison for nodejs",
   "main": "resemble.js",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikhail-g/node-resemblejs.git"
+    "url": "https://github.com/mikhail-g/node-resemble.js.git"
   },
   "keywords": [
     "comparison",
@@ -22,9 +22,9 @@
   "author": "Mykhailo Hariachyi <m.gariachiy@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikhail-g/node-resemblejs.git/issues"
+    "url": "https://github.com/mikhail-g/node-resemble.js/issues"
   },
-  "homepage": "https://github.com/mikhail-g/node-resemblejs.git",
+  "homepage": "https://github.com/mikhail-g/node-resemble.js",
   "dependencies": {
     "jpeg-js": "^0.4.4",
     "pngjs": "^6.0.0"
